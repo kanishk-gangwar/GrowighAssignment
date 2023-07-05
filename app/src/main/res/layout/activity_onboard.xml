@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnboardActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/skip_intro"
+            android:background="@drawable/intro_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingStart="20dp"
+            android:layout_marginBottom="25dp"
+            android:paddingEnd="20dp"
+            android:textColor="#3a7eb0"
+            android:textSize="12dp"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/noto_sans"
+            android:text="Skip Intro" />
+
+        <ImageView
+            android:id="@+id/ImageIntro"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/intro1"/>
+
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            android:background="@drawable/gradiant_color"
+            android:layout_marginEnd="20dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradiant_color"
+                android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/introText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="About Us"/>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+
+
+
+                    <ProgressBar
+                        android:layout_width="100dp"
+                        android:id="@+id/progress_bar"
+                        android:layout_height="100dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progress="0"
+                        android:max="100"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/custom_progress_bar"
+                        android:visibility="invisible"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/intro_home"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignTop="@+id/progress_bar"
+                        android:layout_alignEnd="@+id/progress_bar"
+                        android:layout_alignBottom="@+id/progress_bar"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/intro_img"
+                        android:padding="40dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            
+            
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
